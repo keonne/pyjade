@@ -7,8 +7,8 @@ from itertools import chain
 try:
     from collections import Mapping as MappingType
 except ImportError:
-    import UserDict
-    MappingType = (UserDict.UserDict, UserDict.DictMixin, dict)
+    from collections import UserDict
+    MappingType = (UserDict, dict)
 
 def flatten(l, ltypes=(list, tuple)):
     ltype = type(l)
